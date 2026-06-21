@@ -43,22 +43,26 @@ public class StudentManager {
         System.out.println("Student not found.");
     }
 
-    public void updateStudent(int id, String newName, String newDepartment) {
-
-    for (Student student : students) {
-
-        if (student.getId() == id) {
-
-            students.set(
-                students.indexOf(student),
-                new Student(id, newName, newDepartment)
-            );
-
-            System.out.println("Student updated successfully.");
-            return;
-        }
+    public void countStudents() {
+        System.out.println("Total Students: " + students.size());
     }
 
-    System.out.println("Student not found.");
-}
+    public void updateStudent(int id, String newName, String newDepartment) {
+
+        for (Student student : students) {
+
+            if (student.getId() == id) {
+
+                students.set(
+                    students.indexOf(student),
+                    new Student(id, newName, newDepartment)
+                );
+
+                System.out.println("Student updated successfully.");
+                return;
+            }
+        }
+
+        System.out.println("Student not found.");
+    }
 }

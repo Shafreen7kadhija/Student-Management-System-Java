@@ -14,7 +14,8 @@ public class Main {
             System.out.println("3. Search Student");
             System.out.println("4. Delete Student");
             System.out.println("5. Update Student");
-            System.out.println("6. Exit");
+            System.out.println("6. Count Students");
+            System.out.println("7. Exit");
 
             int choice = sc.nextInt();
 
@@ -65,6 +66,10 @@ public class Main {
                     break;
                     
                 case 6:
+                    manager.countStudents();
+                    break;
+
+                case 7:
                     System.out.println("Exiting...");
                     sc.close();
                     System.exit(0);
